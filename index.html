@@ -5,8 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-blue-300">
-    <p class="text-blue-800 text-[50px]">Hello</p>
+<body style="font-family: 'Montserrat Alternates', sans-serif;" class="bg-[#14274a] text-white">
+
+    <nav class="flex flex-row justify-between p-4 bg-[#14278C] pl-10 pr-10">
+        <div>
+            <h1 class="text-2xl">EPA</h1>
+        </div>
+        <div >
+            <ul class="flex flex-row gap-x-5 cursor-pointer">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+   
+
+    <section class="m-20 flex flex-row justify-around items-center">
+        <div>
+            <h2 class="text-3xl font-semibold font-cursive mb-5">HI, I'M <i class="text-5xl">EFFAH!</i> <br> A Creative Developer</h2>
+            <p class="w-[80vh]">
+            I'm a passionate web developer dedicated to building seamless and engaging digital experiences. I specialize in transforming ideas into functional and friendly websites that captivate and perform efficiently.
+            </p>
+
+            <button class="p-4 border-gray-500 border-[1px] mt-5 rounded-lg text-xs">Download CV</button>
+        </div>
+
+        <div class="w-[50vh]"> <img src="assets/hero.jpg" class="rounded-full"></div>
+    </section>
+
+    
 </body>
 </html>
