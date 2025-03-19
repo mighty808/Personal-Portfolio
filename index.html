@@ -25,10 +25,10 @@
         body{
             background: hsla(182, 67%, 56%, 1);
 
-            background: hsla(0, 2%, 10%, 1);
-            background: linear-gradient(225deg, hsla(0, 2%, 10%, 1) 30%, hsla(219, 57%, 18%, 1) 100%);
-            background: -moz-linear-gradient(225deg, hsla(0, 2%, 10%, 1) 30%, hsla(219, 57%, 18%, 1) 100%);
-            background: -webkit-linear-gradient(225deg, hsla(0, 2%, 10%, 1) 30%, hsla(219, 57%, 18%, 1) 100%);
+            background: hsla(182, 67%, 56%, 1);
+            background: linear-gradient(225deg, rgb(53, 105, 202) 30%, rgb(43, 95, 190) 100%);
+            background: -moz-linear-gradient(225deg, rgb(38, 82, 177) 30%, rgb(49, 92, 172) 100%);
+            background: -webkit-linear-gradient(225deg, rgb(30, 67, 116) 30%, rgb(42, 74, 133) 100%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1B1A1A", endColorstr="#14274A", GradientType=1 );
 
         }
@@ -39,21 +39,21 @@
 
     <nav class="flex flex-row justify-between p-5 pl-20 pr-20 justify-center items-center font-semibold">
         <div>
-            <h1 class="text-2xl font-semibold">EPA</h1>
+            <a id="home" href=""><h1 class="text-2xl font-semibold">EPA</h1></a>
         </div>
         <div >
             <ul class="flex flex-row gap-x-5 cursor-pointer">
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <a href="#home"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#services"><li>Services</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#contact"><li>Contact</li></a>
             </ul>
         </div>
     </nav>
    
 
-    <section class="m-20 flex flex-row justify-around items-center text-center">
+    <section id="home" class="m-20 flex flex-row justify-around items-center text-center">
         <div>
             <h2 class="text-3xl font-semibold font-cursive mb-5">HI, I'M <i class="text-5xl">EFFAH!</i> <br> A Creative Developer</h2>
             <p class="w-[80vh] text-sm">
@@ -67,7 +67,7 @@
         
     </section>
 
-    <section class="m-20">
+    <section id="about" class="m-20">
         <h1 class="ml-10 text-xl font-semibold">ABOUT ME</h1>
 
         <div class="">
@@ -120,7 +120,7 @@
     </div>
     </section>
 
-    <section class="m-10 mb-5 text-2xl font-semibold mt-20">
+    <section id="services" class="m-10 mb-5 text-2xl font-semibold mt-20">
         <div>
             <h2 class="text-center text-3xl font-bold">MY SERVICES</h2>
         </div>
@@ -150,14 +150,15 @@
             
     </section>
         
-    <section class="m-20 shadow-3xl border-gray-500 p-10">
+    <section id="projects" class="m-20 shadow-xl border-gray-800 p-10">
         <div>
             <h1 class="text-center text-3xl font-bold">PROJECTS</h1>
             <p class="text-center">Elevate your brand to new heights with our portfolio expertise</p>
         </div>
 
+    <div class="border-[1px] rounded-lg border-gray-400 text-center">
         <div class="flex gap-10 flex-row">
-            <div class="p-5 border-2 rounded-lg border-gray-800 text-center">
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center rounded-t-[0px]">
                 <img class="" src="assets/Macbook-Air-dminn.me.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Dm Inn Hotel</h1>
                 <p class="text-sm text-center">Designed a sleek, user-friendly hotel website for <strong>DM Inn</strong> with seamless booking, interactive gallery, and a luxury feel. 🚀✨</p>
@@ -177,7 +178,7 @@
             </div>
 
             
-            <div class="p-5 border-2 rounded-lg border-gray-800 text-center">
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center rounded-t-[0px]">
                 <img class="mb-5" src="assets/Macbook-Air-crowdfund-q4w.nl.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Q4W Crowfund</h1>
                 <p class="text-sm text-center">Integrated a seamless crowdfunding platform for Q4W, enhancing donations with a clean design and secure transactions. ✨</p>
@@ -197,7 +198,7 @@
             
         </div>
         <div class="flex gap-10 flex-row">
-            <div class="p-5 border-2 rounded-lg border-gray-800 text-center">
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="" src="assets/Macbook-Air-q4w.nl.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Q4W NL.</h1>
                 <p class="text-sm text-center">Designed and optimized Q4W.nl, the main website for Quality for Water, ensuring a clean, user-friendly, and impactful online presence. 🚀</p>
@@ -214,7 +215,7 @@
                     </button> </a>
 
             </div>
-            <div class="p-5 border-2 rounded-lg border-gray-800 text-center">
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="mb-5" src="assets/Macbook-Air-mighty808.github.io.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Portfolio Website</h1>
                 <p class="text-sm text-center">
@@ -231,7 +232,7 @@
                     </div>
                     </button> </a>
             </div>
-            <div class="p-5 border-2 rounded-lg border-gray-800 text-center">
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="mb-5" src="assets/Macbook-Air-empire-apple.onrender.com.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Empire Apple Store</h1>
                 <p class="text-sm text-center">Designed a modern, user-friendly website for Empire Apple Store, ensuring seamless navigation, secure checkout, and a premium shopping experience. 🍏🛒✨</p>
@@ -250,11 +251,12 @@
             
             
         </div>
+    </div>
     </section>
 
     <h1 class="text-center text-3xl font-semibold ">Reach Out</h1>
 
-    <section class="flex justify-center items-center p-10 mt-2 mb-2 bg-gray-800">
+    <section id="contact" class="flex justify-center items-center p-10 mt-2 mb-2 bg-gray-800">
 
         <div class="flex flex-col gap-y-5 ">
             <input class="h-[50px] w-[500px] rounded-xl pl-3 border-gray-800 border-[1px] text-gray-700 mt-5" type="text" placeholder="Name">
