@@ -30,6 +30,7 @@
             background: -moz-linear-gradient(225deg, rgb(38, 82, 177) 30%, rgb(49, 92, 172) 100%);
             background: -webkit-linear-gradient(225deg, rgb(30, 67, 116) 30%, rgb(42, 74, 133) 100%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1B1A1A", endColorstr="#14274A", GradientType=1 );
+            margin: 0;
 
         }
     </style>
@@ -37,7 +38,7 @@
 <body style="font-family: 'Montserrat Alternates', sans-serif;" 
     class="bg-[#14274a] text-white">
 
-    <nav class="flex flex-row justify-between p-5 pl-20 pr-20 justify-center items-center font-semibold">
+    <!-- <nav class="flex flex-row justify-between p-5 pl-20 pr-20 justify-center items-center font-semibold">
         <div>
             <a id="home" href=""><h1 class="text-2xl font-semibold">EPA</h1></a>
         </div>
@@ -50,24 +51,39 @@
                 <a href="#contact"><li>Contact</li></a>
             </ul>
         </div>
-    </nav>
+    </nav> -->
    
-
-    <section id="home" class="m-20 flex flex-row justify-around items-center text-center">
-        <div>
-            <h2 class="text-3xl font-semibold font-cursive mb-5">HI, I'M <i class="text-5xl">EFFAH!</i> <br> A Creative Developer</h2>
-            <p class="w-[80vh] text-sm">
-            I'm a passionate web developer dedicated to building seamless and engaging digital experiences. I specialize in transforming ideas into functional and friendly websites that captivate and perform efficiently.
+    <section id="home" class="max-lg:m-10 m-20 grid lg:grid-cols-2 2xl:grid-cols-2 md:grid-cols-1 items-center gap-10 px-10">
+        <!-- Left Content -->
+        <div class="max-w-2xl">
+            <h2 class="text-3xl font-semibold font-cursive mb-5">
+                HI, I'M <i class="text-5xl">EFFAH!</i> <br> A Creative Developer
+            </h2>
+            <p class="text-sm text-white">
+                I'm a passionate web developer dedicated to building seamless and engaging digital experiences. 
+                I specialize in transforming ideas into functional and friendly websites that captivate and perform efficiently.
             </p>
-
-            <button onclick="window.open('yourCv.pdf', '_blank')" class="p-4 border-gray-500 border-[1px] mt-5 rounded-lg text-xs">Download CV</button>
-        </div>`
-
-        <div class="w-[50vh]"> <img src="assets/hero.jpg" style="border-radius: 85% 15% 67% 33% / 15% 45% 55% 85%;"></div>
-        
+    
+            <button 
+                onclick="window.open('yourCv.pdf', '_blank')" 
+                class="mt-5 px-6 py-3 border border-gray-500 rounded-lg text-xs 
+                hover:bg-gray-100 transition duration-300"
+            >
+                Download CV
+            </button>
+        </div>
+    
+        <!-- Right Image -->
+        <div class="flex justify-center">
+            <img src="assets/hero.jpg" class="max-xl:w-[45vh] max-lg:w-[35vh] w-full max-w-sm rounded-[85%_15%_67%_33%/_15%_45%_55%_85%] shadow-lg">
+        </div>
+    
     </section>
+    
 
-    <section id="about" class="m-20">
+    
+
+    <section id="about" class="m-20 max-md:text-center">
         <h1 class="ml-10 text-xl font-semibold">ABOUT ME</h1>
 
         <div class="">
@@ -88,7 +104,7 @@
 
     <section class="m-10 mt-5 mb-20">    
         <h3 class="text-xl font-medium">Professional Skills</h3>
-    <div class="justify-around flex shadow-3xl gap-5">   
+    <div class="justify-around grid grid-cols-12 shadow-3xl gap-5 max-lg:grid-cols-6 ">   
         <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" class="w-[55px]">             
@@ -100,8 +116,8 @@
         <img src="https://img.icons8.com/?size=100&id=guteo8_ARDB_&format=png&color=FFFFFF" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=20906&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" class="w-[55px]">             
-        <img src="https://img.icons8.com/?size=100&id=54087&format=png&color=000000" class="w-[55px]">             
-        <img src="https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000" class="w-[55px]">             
+        <!-- <img src="https://img.icons8.com/?size=100&id=54087&format=png&color=000000" class="w-[55px]">             
+        <img src="https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000" class="w-[55px]">              -->
         <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" class="w-[55px]">   
         
     </div>
@@ -110,7 +126,7 @@
     
     <section class="m-10">    
         <h3 class="text-xl font-medium">Professional Tools</h3>
-    <div class="justify-around flex pl-[200px] pr-[200px] items-center">   
+    <div class="justify-around grid grid-cols-5 items-center">   
         <img src="https://img.icons8.com/?size=100&id=gXoJoyTtYXFg&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=lkh3AbJLmFpp&format=png&color=000000" class="w-[55px]">               
@@ -126,38 +142,46 @@
         </div>
     </section>
 
-    <section class="flex flex-row gap-5 m-20 mt-0">
-            <div class="w-1/3 shadow-2xl bg-[#2a454b]">
-                <img src="https://www.greatlike.com/wp-content/uploads/2020/04/1584082601Web-development-designing-Anvar-Freelancer-1-1.png" >
-                <h2 class="text-center mt-5 font-semibold">Website Design</h2>
-                <p class="text-center text-[13.5px] m-5 mt-0">Crafting visually stunning and user-friendly websites that enhance brand presence to deliver seamless Ordeal. From concept to deployment.
-                </p>
-            </div>
-            
-            <div class="w-1/3 shadow-2xl bg-[#2a454b]">
-                <img src="https://th.bing.com/th/id/OIP.uoorexdE_jdJ8TYwaqp93QHaEr?rs=1&pid=ImgDetMain" class="h-[38.5vh]">
-                <h2 class="text-center mt-5 font-semibold">UI Design</h2>
-                <p class="text-center text-[13.5px] m-5 mt-0">Crafting sleek, user-friendly interfaces with seamless navigation and modern aesthetics for an engaging experience. 🚀
-                </p>
-            </div>
-            
-            <div class="w-1/3 shadow-2xl bg-[#2a454b]">
-                <img src="https://th.bing.com/th/id/OIP.13EFufQASEpu_6zhLNp6KQHaEK?rs=1&pid=ImgDetMain" class="h-[38.5vh]">
-                <h2 class="text-center mt-5 font-semibold">Marketing</h2>
-                <p class="text-center text-[13.5px] m-5 mt-0">Developing strategic, data-driven marketing solutions that boost brand engagement. Offering narratives that drive results.
-                </p>
-            </div>
-            
-    </section>
-        
-    <section id="projects" class="m-20 shadow-xl border-gray-800 p-10">
-        <div>
-            <h1 class="text-center text-3xl font-bold">PROJECTS</h1>
-            <p class="text-center">Elevate your brand to new heights with our portfolio expertise</p>
+    <section class="grid grid-cols-3 gap-5 mt-0 px-5 max-lg:grid-cols-2 max-md:grid-cols-1 m-20">
+        <!-- Website Design Card -->
+        <div class="w-full shadow-2xl bg-[dodge-blue] flex flex-col">
+            <img src="https://www.greatlike.com/wp-content/uploads/2020/04/1584082601Web-development-designing-Anvar-Freelancer-1-1.png" 
+                 class="h-[250px] w-full object-cover">
+            <h2 class="text-center mt-5 font-semibold text-white">Website Design</h2>
+            <p class="text-center text-[13.5px] m-5 mt-0 text-gray-300">
+                Crafting visually stunning and user-friendly websites that enhance brand presence to deliver seamless Ordeal. From concept to deployment.
+            </p>
         </div>
+        
+        <!-- UI Design Card -->
+        <div class="w-full shadow-2xl bg-[dodge-blue] flex flex-col">
+            <img src="https://th.bing.com/th/id/OIP.uoorexdE_jdJ8TYwaqp93QHaEr?rs=1&pid=ImgDetMain" 
+                 class="h-[250px] w-full object-cover">
+            <h2 class="text-center mt-5 font-semibold text-white">UI Design</h2>
+            <p class="text-center text-[13.5px] m-5 mt-0 text-gray-300">
+                Crafting sleek, user-friendly interfaces with seamless navigation and modern aesthetics for an engaging experience. 🚀
+            </p>
+        </div>
+        
+        <!-- Marketing Card -->
+        <div class="w-full shadow-2xl bg-[dodge-blue] flex flex-col">
+            <img src="https://th.bing.com/th/id/OIP.13EFufQASEpu_6zhLNp6KQHaEK?rs=1&pid=ImgDetMain" 
+                 class="h-[250px] w-full object-cover">
+            <h2 class="text-center mt-5 font-semibold text-white">Marketing</h2>
+            <p class="text-center text-[13.5px] m-5 mt-0 text-gray-300">
+                Developing strategic, data-driven marketing solutions that boost brand engagement. Offering narratives that drive results.
+            </p>
+        </div>
+    </section>
+    
+    <div>
+        <h1 class="text-center text-3xl font-bold">PROJECTS</h1>
+        <p class="text-center">Elevate your brand to new heights with our portfolio expertise</p>
+    </div>
 
-    <div class="border-[1px] rounded-lg border-gray-400 text-center">
-        <div class="flex gap-10 flex-row">
+
+    <section id="projects" class="m-20 shadow-xl p-10 mt-0 grid grid-cols-2 gap-10 max-lg:grid-cols-1">
+
             <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center rounded-t-[0px]">
                 <img class="" src="assets/Macbook-Air-dminn.me.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Dm Inn Hotel</h1>
@@ -174,7 +198,6 @@
                     </div>
                     </button>
                 </a>
-
             </div>
 
             
@@ -194,10 +217,8 @@
                     </div>
                     </button> </a>
             </div>
-            
-            
-        </div>
-        <div class="flex gap-10 flex-row">
+
+
             <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="" src="assets/Macbook-Air-q4w.nl.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Q4W NL.</h1>
@@ -215,6 +236,8 @@
                     </button> </a>
 
             </div>
+
+            
             <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="mb-5" src="assets/Macbook-Air-mighty808.github.io.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Portfolio Website</h1>
@@ -232,6 +255,25 @@
                     </div>
                     </button> </a>
             </div>
+
+
+            <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
+                <img class="mb-5" src="assets/Macbook-Air-empire-apple.onrender.com.png" >
+                <h1 class="text-xl font-semibold mt-2 mb-1">Empire Apple Store</h1>
+                <p class="text-sm text-center">Designed a modern, user-friendly website for Empire Apple Store, ensuring seamless navigation, secure checkout, and a premium shopping experience. 🍏🛒✨</p>
+
+                <a href="https://empire-apple.onrender.com" target="_blank">
+                <button
+                    class="cursor-pointer bg-gradient-to-b from-indigo-500 to-indigo-600 shadow-[0px_4px_32px_0_rgba(99,102,241,.70)] px-6 py-2 rounded-xl border-[1px] border-slate-500 text-white font-medium group mt-5">
+                    <div class="relative overflow-hidden">
+                        <p class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                        Visit Now
+                        </p>
+                        <p class="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]" > Visit Now </p>
+                    </div>
+                    </button> </a>
+            </div>
+            
             <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center">
                 <img class="mb-5" src="assets/Macbook-Air-empire-apple.onrender.com.png" >
                 <h1 class="text-xl font-semibold mt-2 mb-1">Empire Apple Store</h1>
@@ -250,8 +292,6 @@
             </div>
             
             
-        </div>
-    </div>
     </section>
 
     <h1 class="text-center text-3xl font-semibold ">Reach Out</h1>
