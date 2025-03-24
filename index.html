@@ -38,20 +38,44 @@
 <body style="font-family: 'Montserrat Alternates', sans-serif;" 
     class="bg-[#14274a] text-white">
 
-    <!-- <nav class="flex flex-row justify-between p-5 pl-20 pr-20 justify-center items-center font-semibold">
+    <nav class="flex justify-between items-center p-5 pl-10 pr-10 bg-gray-900 text-white relative">
         <div>
-            <a id="home" href=""><h1 class="text-2xl font-semibold">EPA</h1></a>
+            <a id="home" href="#"><h1 class="text-2xl font-bold">EPA</h1></a>
         </div>
-        <div >
-            <ul class="flex flex-row gap-x-5 cursor-pointer">
-                <a href="#home"><li>Home</li></a>
-                <a href="#about"><li>About</li></a>
-                <a href="#services"><li>Services</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#contact"><li>Contact</li></a>
-            </ul>
-        </div>
-    </nav> -->
+        
+        <button id="menu-btn" class="text-white text-2xl">&#9776;</button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 hidden flex flex-col items-center justify-center space-y-6 text-white text-xl">
+        <button id="close-btn" class="absolute top-5 right-5 text-3xl">&times;</button>
+        <a href="#home" class="hover:text-gray-400 menu-link">Home</a>
+        <a href="#about" class="hover:text-gray-400 menu-link">About</a>
+        <a href="#services" class="hover:text-gray-400 menu-link">Services</a>
+        <a href="#projects" class="hover:text-gray-400 menu-link">Projects</a>
+        <a href="#contact" class="hover:text-gray-400 menu-link">Contact</a>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeBtn = document.getElementById("close-btn");
+        const menuLinks = document.querySelectorAll(".menu-link");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    </script>
    
     <section id="home" class="max-lg:m-2 max-lg:mt-20 m-20  grid lg:grid-cols-2 2xl:grid-cols-2 md:grid-cols-1 items-center gap-10 px-10">
         <!-- Left Content -->
@@ -75,7 +99,7 @@
     
         <!-- Right Image -->
         <div class="flex justify-center">
-            <img src="assets/hero.jpg" class="max-xl:w-[45vh] max-lg:w-[35vh] w-full max-w-sm rounded-[85%_15%_67%_33%/_15%_45%_55%_85%] shadow-lg">
+            <img src="assets/mainhero.JPG" class="max-xl:w-[45vh] max-lg:w-[35vh] w-full max-w-sm rounded-[85%_35%_47%_53%/_25%_15%_85%_55%] shadow-lg">
         </div>
     
     </section>
@@ -126,7 +150,7 @@
     
     <section class="m-10">    
         <h3 class="text-xl font-medium">Professional Tools</h3>
-    <div class="justify-around grid grid-cols-5 items-center">   
+    <div class="justify-center  grid grid-cols-5 items-center">   
         <img src="https://img.icons8.com/?size=100&id=gXoJoyTtYXFg&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" class="w-[55px]">             
         <img src="https://img.icons8.com/?size=100&id=lkh3AbJLmFpp&format=png&color=000000" class="w-[55px]">               
@@ -174,13 +198,13 @@
         </div>
     </section>
     
-    <div class="max-lg:mt-20 max-lg:mb-0">
+    <div class="max-lg:mt-20 max-lg:mb-0" id="projects">
         <h1 class="text-center text-3xl font-bold">PROJECTS</h1>
         <p class="text-center">Elevate your brand to new heights with our portfolio expertise</p>
     </div>
 
 
-    <section id="projects" class=" max-lg:m-2 max-lg:mb-0 m-20 shadow-xl p-10 mt-0 grid grid-cols-2 gap-10 max-lg:grid-cols-1">
+    <section class=" max-lg:m-2 max-lg:mb-0 m-20 shadow-xl p-10 mt-0 grid grid-cols-2 gap-10 max-lg:grid-cols-1">
 
             <div class="p-5 border-[1px] rounded-lg border-gray-400 text-center rounded-t-[0px]">
                 <img class="" src="assets/Macbook-Air-dminn.me.png" >
