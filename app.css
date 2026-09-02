@@ -15,6 +15,14 @@
     --signal: #FF6A3D;
     --signal-dim: rgba(255, 106, 61, 0.12);
 
+    /* Section accents — one hue per sheet, flat color, no blends */
+    --accent-about: #FF6A3D;      /* orange   */
+    --accent-work-hist: #2DD4BF;  /* teal     */
+    --accent-stack: #F5B942;      /* amber    */
+    --accent-services: #A78BFA;   /* violet   */
+    --accent-projects: #38BDF8;   /* sky blue */
+    --accent-contact: #FB7185;    /* rose     */
+
     --font-display: 'Big Shoulders Display', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
     --font-mono: 'Fira Code', monospace;
@@ -69,6 +77,27 @@ body {
     font-size: 11px;
     letter-spacing: 0.1em;
     color: var(--muted);
+}
+
+/* Skill / tech tag pill */
+.tag {
+    display: inline-block;
+    font-family: var(--font-mono), monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* Company / role timeline connector */
+.timeline-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 /* Scroll-reveal system — respects reduced motion */
