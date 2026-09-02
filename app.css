@@ -1,29 +1,19 @@
 /* ==========================================================================
    Effah Aboagye — Portfolio
-   Design direction: "Drawing Set" — a developer's portfolio presented as a
-   set of technical blueprint sheets. Flat color only, no gradients.
+   Dark, minimal. One confident accent. Flat color only, no gradients.
    ========================================================================== */
 
 :root {
-    --ink: #0F1B2A;
-    --panel: #15263B;
-    --panel-2: #1B2E46;
-    --line: #26394F;
-    --line-bright: #4A6785;
-    --text: #E8EEF5;
-    --muted: #8CA0B8;
-    --signal: #FF6A3D;
-    --signal-dim: rgba(255, 106, 61, 0.12);
+    --ink: #0B1220;
+    --panel: #121B2E;
+    --panel-2: #182437;
+    --line: #1E2A3F;
+    --text: #E7ECF3;
+    --muted: #8B98AC;
+    --accent: #34D399;
+    --accent-dim: rgba(52, 211, 153, 0.12);
 
-    /* Section accents — one hue per sheet, flat color, no blends */
-    --accent-about: #FF6A3D;      /* orange   */
-    --accent-work-hist: #2DD4BF;  /* teal     */
-    --accent-stack: #F5B942;      /* amber    */
-    --accent-services: #A78BFA;   /* violet   */
-    --accent-projects: #38BDF8;   /* sky blue */
-    --accent-contact: #FB7185;    /* rose     */
-
-    --font-display: 'Big Shoulders Display', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
     --font-mono: 'Fira Code', monospace;
 }
@@ -35,48 +25,27 @@ html {
 body {
     margin: 0;
     background-color: var(--ink);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0H0V64' fill='none' stroke='%23203148' stroke-width='1'/%3E%3C/svg%3E");
     color: var(--text);
     font-family: var(--font-body), sans-serif;
 }
 
 ::selection {
-    background: var(--signal);
+    background: var(--accent);
     color: var(--ink);
 }
 
 :focus-visible {
-    outline: 2px solid var(--signal);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
-/* Blueprint corner brackets — wrap target in position:relative and drop
-   four .corner spans inside it. */
-.corner {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-color: var(--line-bright);
-    pointer-events: none;
-}
-.corner-tl { top: -1px; left: -1px; border-top: 1px solid; border-left: 1px solid; }
-.corner-tr { top: -1px; right: -1px; border-top: 1px solid; border-right: 1px solid; }
-.corner-bl { bottom: -1px; left: -1px; border-bottom: 1px solid; border-left: 1px solid; }
-.corner-br { bottom: -1px; right: -1px; border-bottom: 1px solid; border-right: 1px solid; }
-
-.eyebrow {
+/* Small mono label — used sparingly (nav tagline, tech tags) */
+.label {
     font-family: var(--font-mono), monospace;
     font-size: 11px;
-    letter-spacing: 0.14em;
-    color: var(--signal);
-    text-transform: uppercase;
-}
-
-.sheet-index {
-    font-family: var(--font-mono), monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     color: var(--muted);
+    text-transform: uppercase;
 }
 
 /* Skill / tech tag pill */
@@ -92,18 +61,19 @@ body {
     border-radius: 999px;
 }
 
-/* Company / role timeline connector */
+/* Timeline connector dot */
 .timeline-dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     flex-shrink: 0;
+    background: var(--accent);
 }
 
 /* Scroll-reveal system — respects reduced motion */
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.in-view {
@@ -121,9 +91,19 @@ body {
     }
 }
 
-/* Hairline tick-mark divider used between sections (ruler motif) */
-.tick-row {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='4'%3E%3Cpath d='M0 0V4' fill='none' stroke='%2326394F' stroke-width='1'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-position: left center;
+/* Project card hover: dim siblings, highlight the hovered card */
+.work-grid:hover .work-card {
+    opacity: 0.5;
+}
+.work-grid .work-card:hover {
+    opacity: 1;
+}
+.work-card {
+    transition: opacity 0.4s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    .work-grid:hover .work-card,
+    .work-grid .work-card:hover {
+        opacity: 1;
+    }
 }
