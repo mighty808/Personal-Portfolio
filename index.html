@@ -7,27 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400..900&family=Space+Grotesk:wght@300..700&family=Fira+Code:wght@300..600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Fira+Code:wght@300..600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body class="antialiased">
 
     <!-- NAV -->
-    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 bg-[var(--ink)]/95 backdrop-blur border-b border-[var(--line)]">
-        <a id="home" href="#home" class="flex items-baseline gap-3">
-            <span class="font-display text-3xl font-bold tracking-wide text-white">EPA</span>
-            <span class="hidden sm:inline eyebrow !text-[var(--muted)]">/ Creative Dev</span>
-        </a>
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 bg-[var(--ink)]/90 backdrop-blur border-b border-[var(--line)]">
+        <a id="home" href="#home" class="text-xl font-bold tracking-tight text-white">Effah Aboagye</a>
 
-        <div class="hidden md:flex items-center gap-8">
-            <a href="#about" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">About</a>
-            <a href="#experience" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">Experience</a>
-            <a href="#stack" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">Stack</a>
-            <a href="#services" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">Services</a>
-            <a href="#projects" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">Work</a>
-            <a href="#contact" class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] hover:text-[var(--signal)] transition-colors">Contact</a>
-            <a href="PAAKWESI EFFAH ABOAGYE_RESUME.pdf" target="_blank" class="font-mono text-xs tracking-widest uppercase border border-[var(--line-bright)] px-4 py-2 hover:border-[var(--signal)] hover:text-[var(--signal)] transition-colors">Résumé</a>
+        <div class="hidden md:flex items-center gap-9">
+            <a href="#about" class="text-sm text-[var(--muted)] hover:text-white transition-colors">About</a>
+            <a href="#experience" class="text-sm text-[var(--muted)] hover:text-white transition-colors">Experience</a>
+            <a href="#stack" class="text-sm text-[var(--muted)] hover:text-white transition-colors">Stack</a>
+            <a href="#services" class="text-sm text-[var(--muted)] hover:text-white transition-colors">Services</a>
+            <a href="#projects" class="text-sm text-[var(--muted)] hover:text-white transition-colors">Work</a>
+            <a href="#contact" class="text-sm text-[var(--muted)] hover:text-white transition-colors">Contact</a>
+            <a href="PAAKWESI EFFAH ABOAGYE_RESUME.pdf" target="_blank" class="text-sm px-4 py-2 rounded-full bg-[var(--accent)] text-[#0B1220] font-semibold hover:bg-white transition-colors">Résumé</a>
         </div>
 
         <button id="menu-btn" aria-label="Open menu" class="md:hidden text-white text-2xl leading-none">&#9776;</button>
@@ -36,13 +33,13 @@
     <!-- MOBILE MENU -->
     <div id="mobile-menu" class="fixed inset-0 z-50 bg-[var(--ink)] hidden flex-col items-center justify-center gap-8 text-white">
         <button id="close-btn" aria-label="Close menu" class="absolute top-6 right-6 text-3xl leading-none">&times;</button>
-        <a href="#home" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Home</a>
-        <a href="#about" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">About</a>
-        <a href="#experience" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Experience</a>
-        <a href="#stack" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Stack</a>
-        <a href="#services" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Services</a>
-        <a href="#projects" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Work</a>
-        <a href="#contact" class="font-mono text-sm tracking-widest uppercase menu-link hover:text-[var(--signal)]">Contact</a>
+        <a href="#home" class="text-lg menu-link hover:text-[var(--accent)]">Home</a>
+        <a href="#about" class="text-lg menu-link hover:text-[var(--accent)]">About</a>
+        <a href="#experience" class="text-lg menu-link hover:text-[var(--accent)]">Experience</a>
+        <a href="#stack" class="text-lg menu-link hover:text-[var(--accent)]">Stack</a>
+        <a href="#services" class="text-lg menu-link hover:text-[var(--accent)]">Services</a>
+        <a href="#projects" class="text-lg menu-link hover:text-[var(--accent)]">Work</a>
+        <a href="#contact" class="text-lg menu-link hover:text-[var(--accent)]">Contact</a>
     </div>
 
     <script>
@@ -66,113 +63,87 @@
     </script>
 
     <!-- HERO -->
-    <section class="relative px-6 md:px-12 pt-16 pb-24 md:pt-24 md:pb-32 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal">
+    <section class="px-6 md:px-12 pt-20 pb-24 md:pt-28 md:pb-32 max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-16 items-center reveal">
         <div>
-            <span class="eyebrow">[ Portfolio — Rev. 2026 ]</span>
-            <h1 class="font-display uppercase leading-[0.82] tracking-tight text-white mt-5">
-                <span class="block text-xl md:text-2xl font-normal text-[var(--muted)] tracking-[0.25em] mb-3">Effah Aboagye</span>
-                <span class="block text-[16vw] md:text-[5.2vw] font-bold">Creative</span>
-                <span class="block text-[16vw] md:text-[5.2vw] font-bold text-[var(--signal)]">Developer</span>
+            <p class="label">Lead Web Designer · TT3KS Industries</p>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.05] mt-4">
+                Effah Aboagye
             </h1>
-            <p class="text-[var(--muted)] max-w-md mt-6 leading-relaxed">
-                Lead Web Designer at <span class="text-[var(--text)]">TT3KS Industries</span>. I design and build fast, considered websites for hotels, NGOs, energy companies and small brands — turning a brief into a live, working product.
+            <p class="text-[var(--muted)] text-lg max-w-lg mt-6 leading-relaxed">
+                I design and build fast, considered websites for hotels, NGOs, energy companies and small brands — turning a brief into a live, working product.
             </p>
             <div class="flex flex-wrap gap-4 mt-9">
                 <a href="PAAKWESI EFFAH ABOAGYE_RESUME.pdf" target="_blank"
-                    class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--signal)] text-[#0F1B2A] font-mono text-xs uppercase tracking-widest font-semibold hover:bg-white transition-colors">
-                    Download CV <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--accent)] text-[#0B1220] text-sm font-semibold hover:bg-white transition-colors">
+                    Download CV <i class="fa-solid fa-arrow-down text-xs"></i>
                 </a>
                 <a href="#projects"
-                    class="inline-flex items-center gap-2 px-6 py-3 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:border-[var(--signal)] hover:text-[var(--signal)] transition-colors">
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--line)] text-sm hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors">
                     View Work
                 </a>
             </div>
-            <p class="sheet-index mt-10"><i class="fa-solid fa-location-dot mr-1"></i> Accra, Ghana — Open to new projects</p>
+            <p class="text-sm text-[var(--muted)] mt-10"><i class="fa-solid fa-location-dot mr-1.5"></i>Accra, Ghana — open to new projects</p>
         </div>
 
-        <div class="relative">
-            <div class="relative border border-[var(--line)] bg-[var(--panel)] p-5">
-                <span class="corner corner-tl"></span>
-                <span class="corner corner-tr"></span>
-                <span class="corner corner-bl"></span>
-                <span class="corner corner-br"></span>
-                <img src="assets/mainhero3.0.png" class="w-full max-w-sm mx-auto" alt="Portrait of Effah Aboagye">
-            </div>
-            <p class="sheet-index mt-3">Fig. 01 — Portrait</p>
+        <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+            <img src="assets/mainhero3.0.png" class="w-full" alt="Portrait of Effah Aboagye">
         </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow">[ 01 — About ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">About</h2>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 01 / 06</span>
-        </div>
-
+    <section id="about" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <p class="label mb-3">About</p>
         <div class="grid md:grid-cols-3 gap-12">
             <div class="md:col-span-2">
-                <p class="text-lg leading-relaxed text-[var(--text)]">
+                <p class="text-xl md:text-2xl leading-relaxed text-white font-medium">
                     A proven track record of driving successful programs and solving complex problems in fast-paced, evolving environments — driven by the opportunity to learn and adapt to client needs.
                 </p>
-                <p class="text-[var(--muted)] leading-relaxed mt-5">
+                <p class="text-[var(--muted)] leading-relaxed mt-6">
                     I've built a strong commitment to integrity and professionalism throughout my career, with the ability to communicate and collaborate effectively at every level of an organization — from hotel booking sites to crowdfunding platforms, corporate brand sites and full-stack products.
                 </p>
             </div>
 
-            <div class="relative border border-[var(--line)] bg-[var(--panel)] p-6">
-                <span class="corner corner-tl"></span>
-                <span class="corner corner-br"></span>
-                <dl class="space-y-5">
-                    <div>
-                        <dt class="eyebrow">Role</dt>
-                        <dd class="mt-1 text-sm text-[var(--text)]">Lead Web Designer, TT3KS Industries</dd>
-                    </div>
-                    <div>
-                        <dt class="eyebrow">Studying</dt>
-                        <dd class="mt-1 text-sm text-[var(--text)]">BSc. Computer Science, University of Ghana (2023 – 2026)</dd>
-                    </div>
-                    <div>
-                        <dt class="eyebrow">Based</dt>
-                        <dd class="mt-1 text-sm text-[var(--text)]">Accra, Ghana</dd>
-                    </div>
-                </dl>
+            <div class="space-y-5 md:pl-8 md:border-l border-[var(--line)]">
+                <div>
+                    <p class="label">Role</p>
+                    <p class="text-sm text-white mt-1">Lead Web Designer, TT3KS Industries</p>
+                </div>
+                <div>
+                    <p class="label">Studying</p>
+                    <p class="text-sm text-white mt-1">BSc. Computer Science, University of Ghana (2023 – 2026)</p>
+                </div>
+                <div>
+                    <p class="label">Based</p>
+                    <p class="text-sm text-white mt-1">Accra, Ghana</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow !text-[var(--accent-work-hist)]">[ 02 — Background ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">Experience</h2>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 02 / 06</span>
-        </div>
+    <section id="experience" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <p class="label mb-3">Experience</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Where I've worked</h2>
 
         <div class="grid md:grid-cols-3 gap-12">
-            <!-- Experience timeline -->
             <div class="md:col-span-2 space-y-10">
 
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="timeline-dot bg-[var(--accent-work-hist)]"></span>
-                        <h3 class="font-display uppercase text-xl font-semibold text-white">TT3KS Industries</h3>
+                        <span class="timeline-dot"></span>
+                        <h3 class="text-lg font-semibold text-white">TT3KS Industries</h3>
                     </div>
-                    <div class="ml-[18px] pl-6 border-l border-[var(--line)] space-y-6">
+                    <div class="ml-[16px] pl-6 border-l border-[var(--line)] space-y-6">
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Lead Web Designer</p>
-                            <p class="sheet-index mt-0.5">Apr 2026 — Present · 6 mos · Remote</p>
+                            <p class="text-sm text-white font-medium">Lead Web Designer</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">Apr 2026 — Present · 6 mos · Remote</p>
                             <div class="flex flex-wrap gap-2 mt-2">
                                 <span class="tag">WordPress</span><span class="tag">Web Interface Design</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Web Design Specialist</p>
-                            <p class="sheet-index mt-0.5">Jan 2026 — Present · 9 mos · Accra, Ghana</p>
+                            <p class="text-sm text-white font-medium">Web Design Specialist</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">Jan 2026 — Present · 9 mos · Accra, Ghana</p>
                             <div class="flex flex-wrap gap-2 mt-2">
                                 <span class="tag">Web Design</span><span class="tag">cPanel</span>
                             </div>
@@ -182,24 +153,24 @@
 
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="timeline-dot bg-[var(--accent-work-hist)]"></span>
-                        <h3 class="font-display uppercase text-xl font-semibold text-white">IT Consortium</h3>
+                        <span class="timeline-dot"></span>
+                        <h3 class="text-lg font-semibold text-white">IT Consortium</h3>
                     </div>
-                    <div class="ml-[18px] pl-6 border-l border-[var(--line)] space-y-6">
+                    <div class="ml-[16px] pl-6 border-l border-[var(--line)] space-y-6">
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Summer Intern</p>
-                            <p class="sheet-index mt-0.5">May 2026 · 1 mo · East Legon Hills, Accra · On-site</p>
+                            <p class="text-sm text-white font-medium">Summer Intern</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">May 2026 · 1 mo · East Legon Hills, Accra · On-site</p>
                         </div>
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Summer Intern</p>
-                            <p class="sheet-index mt-0.5">Sep — Oct 2025 · 2 mos · On-site</p>
+                            <p class="text-sm text-white font-medium">Summer Intern</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">Sep — Oct 2025 · 2 mos · On-site</p>
                             <div class="flex flex-wrap gap-2 mt-2">
                                 <span class="tag">SQL</span><span class="tag">Postman API</span>
                             </div>
                         </div>
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Summer Intern</p>
-                            <p class="sheet-index mt-0.5">Mar — May 2025 · 3 mos · On-site</p>
+                            <p class="text-sm text-white font-medium">Summer Intern</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">Mar — May 2025 · 3 mos · On-site</p>
                             <div class="flex flex-wrap gap-2 mt-2">
                                 <span class="tag">Postman API</span><span class="tag">API Testing</span>
                             </div>
@@ -209,12 +180,12 @@
 
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <span class="timeline-dot bg-[var(--accent-work-hist)]"></span>
-                        <h3 class="font-display uppercase text-xl font-semibold text-white">Q4W</h3>
+                        <span class="timeline-dot"></span>
+                        <h3 class="text-lg font-semibold text-white">Q4W</h3>
                     </div>
-                    <div class="ml-[18px] pl-6 border-l border-[var(--line)]">
-                        <p class="text-sm text-[var(--text)] font-medium">Web Designer <span class="text-[var(--muted)] font-normal">· Contract</span></p>
-                        <p class="sheet-index mt-0.5">Jan — Apr 2025 · 4 mos · Remote</p>
+                    <div class="ml-[16px] pl-6 border-l border-[var(--line)]">
+                        <p class="text-sm text-white font-medium">Web Designer <span class="text-[var(--muted)] font-normal">· Contract</span></p>
+                        <p class="text-sm text-[var(--muted)] mt-0.5">Jan — Apr 2025 · 4 mos · Remote</p>
                         <div class="flex flex-wrap gap-2 mt-2">
                             <span class="tag">WordPress Design</span><span class="tag">Figma</span>
                         </div>
@@ -223,39 +194,35 @@
             </div>
 
             <!-- Education + Certifications -->
-            <div class="space-y-8">
-                <div class="relative border border-[var(--line)] bg-[var(--panel)] p-6">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <span class="eyebrow !text-[var(--accent-work-hist)]">Education</span>
-                    <div class="mt-4 space-y-4">
+            <div class="space-y-10">
+                <div>
+                    <p class="label mb-4">Education</p>
+                    <div class="space-y-4">
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">University of Ghana</p>
-                            <p class="text-xs text-[var(--muted)] mt-0.5">BSc. Computer Science</p>
-                            <p class="sheet-index mt-0.5">2023 — 2026</p>
+                            <p class="text-sm text-white font-medium">University of Ghana</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">BSc. Computer Science</p>
+                            <p class="text-xs text-[var(--muted)] mt-0.5">2023 — 2026</p>
                         </div>
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">Adisadel College</p>
-                            <p class="text-xs text-[var(--muted)] mt-0.5">High School Diploma</p>
-                            <p class="sheet-index mt-0.5">2019 — 2022</p>
+                            <p class="text-sm text-white font-medium">Adisadel College</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">High School Diploma</p>
+                            <p class="text-xs text-[var(--muted)] mt-0.5">2019 — 2022</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative border border-[var(--line)] bg-[var(--panel)] p-6">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <span class="eyebrow !text-[var(--accent-work-hist)]">Certifications</span>
-                    <div class="mt-4 space-y-4">
+                <div>
+                    <p class="label mb-4">Certifications</p>
+                    <div class="space-y-4">
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">ALX Frontend Certification</p>
-                            <p class="text-xs text-[var(--muted)] mt-0.5">alx_africa</p>
-                            <p class="sheet-index mt-0.5">Issued Nov 2024</p>
+                            <p class="text-sm text-white font-medium">ALX Frontend Certification</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">alx_africa</p>
+                            <p class="text-xs text-[var(--muted)] mt-0.5">Issued Nov 2024</p>
                         </div>
                         <div>
-                            <p class="text-sm text-[var(--text)] font-medium">HTML5 Application Development Fundamentals</p>
-                            <p class="text-xs text-[var(--muted)] mt-0.5">University of Michigan</p>
-                            <p class="sheet-index mt-0.5">Issued Sep 2023</p>
+                            <p class="text-sm text-white font-medium">HTML5 Application Development Fundamentals</p>
+                            <p class="text-sm text-[var(--muted)] mt-0.5">University of Michigan</p>
+                            <p class="text-xs text-[var(--muted)] mt-0.5">Issued Sep 2023</p>
                         </div>
                     </div>
                 </div>
@@ -264,41 +231,36 @@
     </section>
 
     <!-- STACK -->
-    <section id="stack" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow !text-[var(--accent-stack)]">[ 03 — Stack ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">Tools &amp; Technologies</h2>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 03 / 06</span>
+    <section id="stack" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <p class="label mb-3">Stack</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Tools &amp; technologies</h2>
+
+        <p class="text-sm text-[var(--muted)] mb-5">Professional skills</p>
+        <div class="flex flex-wrap gap-4 mb-14">
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=t4YbEbA834uH&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=W0YEwBDDfTeu&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=13664&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=guteo8_ARDB_&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=20906&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=13441&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
         </div>
 
-        <h3 class="font-mono text-xs uppercase tracking-widest text-[var(--muted)] mb-4">Professional Skills</h3>
-        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-11 gap-px bg-[var(--line)] border border-[var(--line)] mb-14">
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=20909&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=t4YbEbA834uH&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=W0YEwBDDfTeu&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=13664&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=guteo8_ARDB_&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=20906&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=13441&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
+        <p class="text-sm text-[var(--muted)] mb-5">Professional tools</p>
+        <div class="flex flex-wrap gap-4 mb-14">
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=gXoJoyTtYXFg&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=lkh3AbJLmFpp&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=63204&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
+            <div class="w-14 h-14 rounded-xl bg-[var(--panel)] flex items-center justify-center hover:bg-[var(--panel-2)] transition-colors"><img src="https://img.icons8.com/?size=100&id=25020&format=png&color=FFFFFF" class="w-7 opacity-80"></div>
         </div>
 
-        <h3 class="font-mono text-xs uppercase tracking-widest text-[var(--muted)] mb-4">Professional Tools</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-px bg-[var(--line)] border border-[var(--line)] max-w-xl">
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=gXoJoyTtYXFg&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=lkh3AbJLmFpp&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=63204&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-            <div class="bg-[var(--panel)] flex items-center justify-center aspect-square p-4 hover:bg-[var(--panel-2)] hover:ring-1 hover:ring-inset hover:ring-[var(--accent-stack)] transition-colors"><img src="https://img.icons8.com/?size=100&id=25020&format=png&color=FFFFFF" class="w-8 opacity-80 hover:opacity-100 transition-opacity"></div>
-        </div>
-
-        <h3 class="font-mono text-xs uppercase tracking-widest text-[var(--muted)] mt-14 mb-4">Also On My Radar</h3>
+        <p class="text-sm text-[var(--muted)] mb-5">Also on my radar</p>
         <div class="flex flex-wrap gap-2">
             <span class="tag">SQL</span>
             <span class="tag">Postman API</span>
@@ -313,42 +275,37 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow !text-[var(--accent-services)]">[ 04 — Services ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">What I Do</h2>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 04 / 06</span>
-        </div>
+    <section id="services" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <p class="label mb-3">Services</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">What I do</h2>
 
-        <div class="grid md:grid-cols-3 gap-px bg-[var(--line)] border border-[var(--line)]">
-            <div class="bg-[var(--panel)] p-8 hover:bg-[var(--panel-2)] transition-colors">
-                <div class="w-12 h-12 border border-[var(--accent-services)]/40 flex items-center justify-center text-[var(--accent-services)] text-lg mb-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="w-12 h-12 rounded-full bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] text-lg mb-5">
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Website Design &amp; Development</h3>
-                <p class="text-sm text-[var(--muted)] mt-3 leading-relaxed">
+                <h3 class="text-lg font-semibold text-white">Website Design &amp; Development</h3>
+                <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">
                     Crafting visually stunning, user-friendly websites that enhance brand presence — from concept to deployment.
                 </p>
             </div>
 
-            <div class="bg-[var(--panel)] p-8 hover:bg-[var(--panel-2)] transition-colors">
-                <div class="w-12 h-12 border border-[var(--accent-services)]/40 flex items-center justify-center text-[var(--accent-services)] text-lg mb-6">
+            <div>
+                <div class="w-12 h-12 rounded-full bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] text-lg mb-5">
                     <i class="fa-solid fa-pen-ruler"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">UI / UX Design</h3>
-                <p class="text-sm text-[var(--muted)] mt-3 leading-relaxed">
+                <h3 class="text-lg font-semibold text-white">UI / UX Design</h3>
+                <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">
                     Sleek, user-friendly interfaces with seamless navigation and modern aesthetics for an engaging experience.
                 </p>
             </div>
 
-            <div class="bg-[var(--panel)] p-8 hover:bg-[var(--panel-2)] transition-colors">
-                <div class="w-12 h-12 border border-[var(--accent-services)]/40 flex items-center justify-center text-[var(--accent-services)] text-lg mb-6">
+            <div>
+                <div class="w-12 h-12 rounded-full bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] text-lg mb-5">
                     <i class="fa-solid fa-bullhorn"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Marketing</h3>
-                <p class="text-sm text-[var(--muted)] mt-3 leading-relaxed">
+                <h3 class="text-lg font-semibold text-white">Marketing</h3>
+                <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">
                     Strategic, data-driven marketing solutions that boost brand engagement with narratives that drive results.
                 </p>
             </div>
@@ -356,189 +313,134 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow !text-[var(--accent-projects)]">[ 05 — Work ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">Selected Work</h2>
-                <p class="text-[var(--muted)] mt-3 max-w-md">Elevate your brand to new heights with our portfolio expertise.</p>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 05 / 06</span>
-        </div>
+    <section id="projects" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <p class="label mb-3">Work</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Selected work</h2>
+        <p class="text-[var(--muted)] max-w-md mb-12">Elevate your brand to new heights with our portfolio expertise.</p>
 
-        <div class="grid md:grid-cols-2 gap-px bg-[var(--line)] border border-[var(--line)]">
+        <div class="work-grid grid md:grid-cols-2 gap-10">
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets/Macbook-Air-dminn.me.png" alt="Dm Inn Hotel website screenshot">
+            <a target="_blank" href="https://dminn.me" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets/Macbook-Air-dminn.me.png" alt="Dm Inn Hotel website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Hotel &amp; Booking</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Hotel &amp; Booking</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Dm Inn Hotel</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Dm Inn Hotel</h3>
-                <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed a sleek, user-friendly hotel website for <strong class="text-[var(--text)]">DM Inn</strong> with seamless booking, interactive gallery, and a luxury feel.</p>
-                <a target="_blank" href="https://dminn.me" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+                <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed a sleek, user-friendly hotel website for DM Inn with seamless booking, interactive gallery, and a luxury feel.</p>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets/Macbook-Air-crowdfund-q4w.nl.png" alt="Q4W Crowdfund website screenshot">
+            <a href="https://crowdfund-q4w.nl" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets/Macbook-Air-crowdfund-q4w.nl.png" alt="Q4W Crowdfund website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Crowdfunding Platform</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Crowdfunding Platform</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Q4W Crowdfund</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Q4W Crowdfund</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Integrated a seamless crowdfunding platform for Q4W, enhancing donations with a clean design and secure transactions.</p>
-                <a href="https://crowdfund-q4w.nl" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets//Macbook-Air-q4w.nl (1).png" alt="Q4W NL website screenshot">
+            <a href="https://q4w.nl" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets//Macbook-Air-q4w.nl (1).png" alt="Q4W NL website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Corporate Website</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Corporate Website</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Q4W NL.</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Q4W NL.</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed and optimized Q4W.nl, the main website for Quality for Water, ensuring a clean, user-friendly, and impactful online presence.</p>
-                <a href="https://q4w.nl" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets/Macbook-Air-mighty808.github.io.png" alt="Portfolio website screenshot">
+            <a href="https://joelaboagye.online" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets/Macbook-Air-mighty808.github.io.png" alt="Portfolio website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Personal Portfolio</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Personal Portfolio</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Portfolio Website</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Portfolio Website</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed and developed a sleek, responsive portfolio website to showcase one's work, skills and projects — focused on UI, animation and user experience.</p>
-                <a href="https://joelaboagye.online" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets/Macbook-Air-blossomingfigspsych.com.png" alt="Blossoming Figs Psychological Services website screenshot">
+            <a href="https://blossomingfigspsych.com/" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets/Macbook-Air-blossomingfigspsych.com.png" alt="Blossoming Figs Psychological Services website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Mental Health</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Mental Health</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Blossoming Figs Psychological Services LLC.</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Blossoming Figs Psychological Services LLC.</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed a clean, user-friendly mental health website focused on accessibility, clarity, and a supportive user experience.</p>
-                <a href="https://blossomingfigspsych.com/" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <img class="w-full" src="assets/Macbook-Air-daaviscuisine.store.png" alt="Daavi's Cuisine website screenshot">
+            <a href="https://daaviscuisine.store/" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full transition-transform duration-500 group-hover:scale-[1.03]" src="assets/Macbook-Air-daaviscuisine.store.png" alt="Daavi's Cuisine website screenshot">
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Catering &amp; Food</span>
-                    <span class="sheet-index">Status: Live</span>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Catering &amp; Food</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Daavi's Cuisine</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Daavi's Cuisine</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Created an inviting catering website for Daavi's Cuisine that showcases delicious menus and makes ordering easy.</p>
-                <a href="https://daaviscuisine.store/" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)] bg-[#0c1420]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <div class="flex items-center gap-1.5 bg-[#0c1420] px-4 py-2.5 border-b border-[var(--line)]">
-                        <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-                        <span class="ml-3 font-mono text-[11px] text-[var(--muted)] truncate">myriadprojectsenergy.com</span>
+            <a href="https://myriadprojectsenergy.com/" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full aspect-[16/9] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" src="assets/myriad-energy.png" alt="Myriad Energy website screenshot">
+                </div>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Energy &amp; Engineering</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Myriad Energy</h3>
                     </div>
-                    <img class="w-full aspect-[16/9] object-cover object-top" src="assets/myriad-energy.png" alt="Myriad Energy website screenshot">
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Energy &amp; Engineering</span>
-                    <span class="sheet-index">Status: Live</span>
-                </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Myriad Energy</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Built a bold corporate site for Myriad Energy, an African energy &amp; engineering company, blending industrial imagery with a clean, trust-driven layout.</p>
-                <a href="https://myriadprojectsenergy.com/" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate -->
-            <div class="bg-[var(--panel)] p-8">
-                <div class="relative border border-[var(--line)] bg-[#0c1420]">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <div class="flex items-center gap-1.5 bg-[#0c1420] px-4 py-2.5 border-b border-[var(--line)]">
-                        <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-                        <span class="ml-3 font-mono text-[11px] text-[var(--muted)] truncate">shaybanaturals.com</span>
+            <a href="https://shaybanaturals.com/" target="_blank" class="work-card group block">
+                <div class="rounded-2xl overflow-hidden bg-[var(--panel)]">
+                    <img class="w-full aspect-[16/9] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" src="assets/shayba-naturals.png" alt="Shayba Naturals website screenshot">
+                </div>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Beauty &amp; Skincare</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Shayba Naturals</h3>
                     </div>
-                    <img class="w-full aspect-[16/9] object-cover object-top" src="assets/shayba-naturals.png" alt="Shayba Naturals website screenshot">
+                    <i class="fa-solid fa-arrow-up-right text-[var(--muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
                 </div>
-                <div class="flex items-center justify-between mt-4 mb-1">
-                    <span class="eyebrow !text-[var(--accent-projects)]">Beauty &amp; Skincare</span>
-                    <span class="sheet-index">Status: Live</span>
-                </div>
-                <h3 class="font-display uppercase text-2xl font-semibold text-white">Shayba Naturals</h3>
                 <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Designed a warm, botanical e-commerce experience for Shayba Naturals' organic skincare line, from category browsing to checkout.</p>
-                <a href="https://shaybanaturals.com/" target="_blank" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 border border-[var(--line-bright)] font-mono text-xs uppercase tracking-widest hover:bg-[var(--signal)] hover:text-[#0F1B2A] hover:border-[var(--signal)] transition-colors">
-                    Visit Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
+            </a>
 
-            <!-- Project Plate — in development, no live link yet -->
-            <div class="bg-[var(--panel)] p-8 md:col-span-2 grid md:grid-cols-[1.1fr_2fr] gap-8 items-center">
-                <div class="relative border border-[var(--line)] aspect-[16/9] flex items-center justify-center">
-                    <span class="corner corner-tl"></span>
-                    <span class="corner corner-br"></span>
-                    <i class="fa-solid fa-trophy text-4xl text-[var(--accent-projects)]/40"></i>
+            <div class="work-card md:col-span-2 rounded-2xl bg-[var(--panel)] p-8 grid md:grid-cols-[1fr_2fr] gap-8 items-center">
+                <div class="rounded-xl bg-[var(--panel-2)] aspect-[16/9] flex items-center justify-center">
+                    <i class="fa-solid fa-trophy text-4xl text-[var(--accent)]/50"></i>
                 </div>
                 <div>
-                    <div class="flex items-center justify-between mb-1">
-                        <span class="eyebrow !text-[var(--accent-projects)]">Esports Platform</span>
-                        <span class="sheet-index">Status: In Dev</span>
-                    </div>
-                    <h3 class="font-display uppercase text-2xl font-semibold text-white">Apex Arenas</h3>
+                    <p class="text-xs text-[var(--muted)] uppercase tracking-wide">Esports Platform · In Development</p>
+                    <h3 class="text-lg font-semibold text-white mt-1">Apex Arenas</h3>
                     <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Co-founded and building an esports tournament platform for Ghana — bracket generation, player registration and formats like double elimination and group stages.</p>
-                    <div class="flex flex-wrap gap-2 mt-5">
+                    <div class="flex flex-wrap gap-2 mt-4">
                         <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
                     </div>
                 </div>
@@ -548,35 +450,24 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="px-6 md:px-12 py-20 md:py-28 max-w-7xl mx-auto reveal border-t border-[var(--line)]">
-        <div class="tick-row flex items-baseline justify-between pb-4 mb-12">
-            <div>
-                <span class="eyebrow !text-[var(--accent-contact)]">[ 06 — Contact ]</span>
-                <h2 class="font-display uppercase text-4xl md:text-5xl font-bold text-white mt-2">Let's Build Something</h2>
-            </div>
-            <span class="sheet-index hidden sm:block">Sheet 06 / 06</span>
-        </div>
-
-        <div class="relative border border-[var(--line)] bg-[var(--panel)] px-8 py-16 flex flex-col items-center text-center">
-            <span class="corner corner-tl"></span>
-            <span class="corner corner-tr"></span>
-            <span class="corner corner-bl"></span>
-            <span class="corner corner-br"></span>
-            <span class="eyebrow !text-[var(--accent-contact)]">Get In Touch</span>
-            <a href="mailto:effahaboagye888@gmail.com" class="font-display uppercase text-3xl sm:text-5xl font-bold text-white mt-4 hover:text-[var(--accent-contact)] transition-colors break-all">
+    <section id="contact" class="px-6 md:px-12 py-20 md:py-28 max-w-6xl mx-auto reveal border-t border-[var(--line)]">
+        <div class="text-center">
+            <p class="label mb-4">Get in touch</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's build something.</h2>
+            <a href="mailto:effahaboagye888@gmail.com" class="text-2xl sm:text-4xl font-semibold text-[var(--muted)] hover:text-[var(--accent)] transition-colors break-all">
                 effahaboagye888@gmail.com
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-[var(--line)] bg-[var(--panel)]">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 py-10 grid md:grid-cols-3 gap-6 items-center text-center md:text-left">
-            <p class="font-mono text-xs tracking-widest uppercase text-[var(--muted)]">Designed &amp; developed by Effah Aboagye</p>
-            <p class="font-mono text-xs tracking-widest uppercase text-[var(--muted)] text-center">© Codeco 2026 — All rights reserved</p>
+    <footer class="border-t border-[var(--line)]">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 py-10 grid md:grid-cols-3 gap-6 items-center text-center md:text-left">
+            <p class="text-xs text-[var(--muted)]">Designed &amp; developed by Effah Aboagye</p>
+            <p class="text-xs text-[var(--muted)] text-center">© Codeco 2026 — All rights reserved</p>
             <div class="flex gap-5 items-center justify-center md:justify-end">
-                <a href="https://www.linkedin.com/in/paakwesi-effah-aboagye-791269264/" target="_blank" class="text-[var(--muted)] hover:text-[var(--signal)] transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                <a href="mailto:effahaboagye888@gmail.com" class="text-[var(--muted)] hover:text-[var(--signal)] transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/paakwesi-effah-aboagye-791269264/" target="_blank" class="text-[var(--muted)] hover:text-[var(--accent)] transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="mailto:effahaboagye888@gmail.com" class="text-[var(--muted)] hover:text-[var(--accent)] transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
             </div>
         </div>
     </footer>
